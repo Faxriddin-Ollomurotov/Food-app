@@ -1,0 +1,138 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.table-maxsulotlar{
+    width: 80vw;
+    height: 88vh;
+    background: #E5E5E5;;
+    position: relative;
+}
+.pixel{
+    width: 80vw;
+    height: 20px;
+    background: #E5E5E5;;
+}
+.table-navbar{
+    height: 36px;
+    padding-top: 8px;
+    margin: 20px 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px rgba(141, 155, 168, 0.35895);
+    display: flex;
+    justify-content: space-evenly;
+}
+.table-navbar>div{
+    font-size: 11px;
+line-height: 13px;
+font-weight: 700;
+text-transform: uppercase;
+color: #2D3A45;
+}
+.row-maxsulot>img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin:0px 28px;
+}
+.maxsulot-table{
+    width: 75vw;
+    height: 60px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    margin-left: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+
+}
+.row-maxsulot{
+    width: 290px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.maxsulot-categoriyasi{
+    width: 190px;
+    /* margin-left: 100px; */
+}
+.maxsulot-narxi{
+    width: 175px;
+}
+.maxsulot-qushimchasi{
+    width: 200px;
+}
+.maxsulot-actioni{
+    display: flex;
+    align-items: center;
+}
+.taxrirlash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 2px rgba(174, 176, 181, 0.314986);
+    border-radius: 50%;
+    border: 1px solid rgba(174, 176, 181, 0.314986);
+    margin-right: 30px;
+}
+
+.btn-yuklash{
+    width: 75vw;
+    height: 60px;
+    background-color: rgba(174, 176, 181, 0.314986);
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 36px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.action-edit{
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+}
+.action-delete{
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+}
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
