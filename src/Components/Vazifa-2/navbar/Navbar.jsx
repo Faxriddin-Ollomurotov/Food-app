@@ -1,10 +1,20 @@
 import React, { Component } from 'react'
 import './Navbar.css';
+import Maxsulotlar from '../Maxsulotlar/maxsulotlar'
 import searchlogo from '../Sidebar/images/search.svg'
 import navLogo from '../Sidebar/images/Group 2.svg'
+import {maxsulotlar} from "../Maxsulotlar/data";
 
 export default class Navbar extends Component {
+    // state={
+    //     data:maxsulotlar
+    // }
     render() {
+        // const Search=({target})=>{
+        //    const NewData=this.state.data.filter(value=>value.name.includes(target.value))
+        //     this.setState({data:NewData});
+        // }
+
         return (
             <div>
                 <div className="navbar">
@@ -21,13 +31,14 @@ export default class Navbar extends Component {
                         </div>
                     </div>
                     <div className="search">
-                        <input type="text" placeholder='Qidirish' />
+                        <input  name='search' type="text" placeholder='Qidirish' />
                         <img src={searchlogo} alt="" />
                     </div>
                     <div className='btn'>
                         <img src={navLogo} alt="" />
                     </div>
                 </div>
+                <Maxsulotlar database={this.Search}/>
             </div>
         )
     }

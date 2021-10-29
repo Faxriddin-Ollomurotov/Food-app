@@ -6,11 +6,15 @@ import { maxsulotlar } from './data'
 
 export default class Maxsulotlar extends Component {
     
-
-
+    constructor(props){
+        super(props);
         state={
-            FastFood:maxsulotlar
+            FastFood:this.props.database
         }
+        console.log(props.database, 'salom hammaga');
+    }
+
+        
         render() {
         const handleDelete=(id)=>{
             const NewMaxsulotlar=this.state.FastFood.filter(value=>value.id!==id);
