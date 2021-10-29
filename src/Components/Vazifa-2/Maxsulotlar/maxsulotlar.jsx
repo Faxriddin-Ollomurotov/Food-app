@@ -2,94 +2,32 @@ import React, { Component } from 'react'
 import './maxsulotlar.css'
 import {FiEdit3} from 'react-icons/fi'
 import {RiDeleteBinLine} from 'react-icons/ri'
+import { maxsulotlar } from './data'
 
 export default class Maxsulotlar extends Component {
     
-    render() {
-        const maxsulotlar =[
-            {
-                id:1,
-                imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-                name:'Lavash mini',
-                category:'Lavash',
-                price:'18.000',
-                reference:'Kichkina lavash',
-            },
-            {
-                id:2,
-                imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-                name:'ChizburgerMax',
-                category:'Burger',
-                price:'23.000',
-                reference:'Kichkina lavash',
-            },
-            {
-                id:3,
-                imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-                name:'LavashMax',
-                category:'Lavash',
-                price:'8.000',
-                reference:'Kichkina lavash',
-            },
-            {
-                id:4,
-                imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-                name:'Lavash S Sirom',
-                category:'Lavash',
-                price:'21.000',
-                reference:'Kichkina lavash',
-            },
-            {
-                id:5,
-                imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-                name:'Burger mini',
-                category:'Burger',
-                price:'11.000',
-                reference:'Kichkina lavash',
-            },
-            {
-                id:6,
-                imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-                name:'Lavash mini',
-                category:'Lavash',
-                price:'18.000',
-                reference:'Kichkina lavash',
-            },
-            // {
-            //     id:7,
-            //     imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-            //     name:'Coco-Cola 1,5l',
-            //     category:'Ichimlik',
-            //     price:'34.000',
-            //     reference:'Kichkina lavash',
-            // },
-            // {
-            //     id:8,
-            //     imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-            //     name:'Coco-cola 1l',
-            //     category:'Ichimlik',
-            //     price:'18.000',
-            //     reference:'Kichkina lavash',
-            // },
-            // {
-            //     id:9,
-            //     imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-            //     name:'Burger mini',
-            //     category:'Burger',
-            //     price:'11.000',
-            //     reference:'Kichkina lavash',
-            // },
-            // {
-            //     id:10,
-            //     imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
-            //     name:'Lavash mini',
-            //     category:'Lavash',
-            //     price:'18.000',
-            //     reference:'Kichkina lavash',
-            // }
-        ];
 
 
+        state={
+            FastFood:maxsulotlar
+        }
+        render() {
+        const handleDelete=(id)=>{
+            const NewMaxsulotlar=this.state.FastFood.filter(value=>value.id!==id);
+            this.setState({FastFood:NewMaxsulotlar})
+        }
+        const handleSortCategory=()=>{
+            const NewData=this.state.FastFood.sort((a,b)=>a.category.localeCompare(b.category));
+            this.setState({FastFood:NewData})
+            console.log(NewData);
+        }
+        const handleSortPrice=()=>{
+            const NewDataa=this.state.FastFood.sort((a,b)=>Number(a.price)-Number(b.price)
+            );
+            this.setState({
+                FastFood:NewDataa
+            })
+        }
 
         return (
             
@@ -97,15 +35,15 @@ export default class Maxsulotlar extends Component {
                 <div className='pixel'></div>
                 <div className="table-navbar">
                         <div>MAXSULOT</div>
-                        <div>KATEGORIYA</div>
-                        <div>NARXI</div>
+                        <div style={{cursor:'pointer'}} onClick={handleSortCategory}>KATEGORIYA</div>
+                        <div style={{cursor:'pointer'}} onClick={handleSortPrice}>NARXI</div>
                         <div>QO'SHIMCHA</div>
                         <div>ACTION</div>
                     </div>
                 <div className="maxsulot">
-                    {maxsulotlar.map((value)=>{
+                    {this.state.FastFood.map((value)=>{
                         return(
-                            <div className="maxsulot-table">
+                            <div key={value.id} className="maxsulot-table">
                                 <div className="row-maxsulot">
                                     <img src={value.imgURL} alt="rasm" />
                                     <div className="maxsulot-nomi">{value.name}</div>
@@ -117,7 +55,7 @@ export default class Maxsulotlar extends Component {
                                     <div className="taxrirlash">
                                     <FiEdit3/>
                                     </div>
-                                    <div className="taxrirlash">
+                                    <div onClick={()=>handleDelete(value.id)} className="taxrirlash">
                                     <RiDeleteBinLine />
                                     </div>
                                 </div>

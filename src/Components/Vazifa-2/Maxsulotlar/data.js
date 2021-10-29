@@ -1,0 +1,50 @@
+export  const maxsulotlar =[
+    {
+        id:1,
+        imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
+        name:'Lavash mini',
+        category:'Lavash',
+        price:'18.000',
+        reference:'Kichkina lavash',
+    },
+    {
+        id:2,
+        imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
+        name:'ChizburgerMax',
+        category:'Burger',
+        price:'23.000',
+        reference:'Kichkina lavash',
+    },
+    {
+        id:3,
+        imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
+        name:'LavashMax',
+        category:'Lavash',
+        price:'8.000',
+        reference:'Kichkina lavash',
+    },
+    {
+        id:4,
+        imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
+        name:'Lavash S Sirom',
+        category:'Lavash',
+        price:'21.000',
+        reference:'Kichkina lavash',
+    },
+    {
+        id:5,
+        imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
+        name:'Burger mini',
+        category:'Burger',
+        price:'11.000',
+        reference:'Kichkina lavash',
+    },
+    {
+        id:6,
+        imgURL:'https://bugaga.ru/uploads/posts/2018-03/1522426582_4.jpg',
+        name:'Lavash mini',
+        category:'Lavash',
+        price:'18.000',
+        reference:'Kichkina lavash',
+    } 
+];
